@@ -1,0 +1,35 @@
+<div class="container-card">
+    <!-- title -->
+    <h1 class="title">App Card Application</h1>
+    <!--1. data section -->
+    <p>
+        <strong>Name: </strong>{{ name }}
+    </p>
+    <p>
+        <strong>Age: </strong>{{ validAge() }}
+    </p>
+    <p>
+        <strong>Description: </strong>{{ description }}
+    </p>
+    <!--2. form section -->
+    <h2>{{name && age && description ? 'update profile': 'enter profile'}}</h2>
+    <input 
+        type="text" 
+        name="name"  
+        placeholder="Enter name" 
+        [(ngModel)]="name">
+    <br>
+    <input 
+        type="number" 
+        name="age" 
+        placeholder="Enter age" 
+        [(ngModel)]="age">
+    <br>
+    <input 
+        type="text" 
+        name="description" 
+        placeholder="Enter description" 
+        [(ngModel)]="description">
+    <br>
+</div>
+
