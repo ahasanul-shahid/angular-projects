@@ -2,6 +2,10 @@
     <h1 class="title">Counter Application</h1>
     <hr>
     <h2 class="secondery-text">Counter: {{ counter }}</h2>
+    <div class="container-step">
+        <label for="step">increment/decrement by</label>
+        <input type="text" [(ngModel)]="stepValue">
+    </div>
     <div class="container-btns">
         <button (click)="incrementCounter()">Increment</button>
         <button (click)="decrementCounter()">Decrement</button>
