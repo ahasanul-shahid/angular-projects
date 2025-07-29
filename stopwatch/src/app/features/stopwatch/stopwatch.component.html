@@ -1,0 +1,20 @@
+<div class="stopwatch-container">
+    <!-- title -->
+    <h1 class="title">Stopwatch Application</h1>
+    <hr>
+    <!-- 1. timer -->
+    <div class="timer-container">
+        <span>{{ seconds | padZero}}</span>
+        <span>:</span>
+        <span>{{ centiSeconds | padZero }}</span>
+    </div>
+    <!-- 2. actions -->
+     <div class="action-container">
+        @if(isPaused){
+            <button (click)="onStartTimer()">start</button>
+        }@else {
+            <button (click)="onPauseTimer()">pause</button>
+        }
+        <button (click)="onResetTimer()">reset</button>
+     </div>
+</div>

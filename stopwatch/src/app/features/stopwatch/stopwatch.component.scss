@@ -1,0 +1,30 @@
+:host{
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.stopwatch-container{
+    width: max-content;
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: lemonchiffon;
+}
+.title, .timer-container{
+    text-align: center;
+}
+.timer-container{
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+.action-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button{
+    padding: 5px;
+    background-color: cornsilk;
+    border-radius: 3px;
+}
