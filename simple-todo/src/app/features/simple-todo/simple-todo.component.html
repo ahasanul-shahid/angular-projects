@@ -1,0 +1,27 @@
+<div class="todo-container">
+    <!-- title -->
+    <h1 class="title">Simple Todo application</h1>
+    <hr>
+    <!-- 1. task form -->
+    <form [formGroup]="todoForm" (ngSubmit)="onNewTask()">
+            <div class="form-container">
+            <input 
+                type="text" 
+                name="task" 
+                id="task" 
+                formControlName="task" 
+                placeholder="enter a new task">
+            <button type="submit" [disabled]="!validTask()">Add task</button>
+        </div>
+        </form>
+    <!-- 2. task list -->
+    @for(task of taskList; track task; let i= $index){
+        <div class="task-container">
+            <span> {{ task }} </span>
+            <button (click)="onDelete(i)"> - </button>
+        </div>
+    }
+    @empty {
+        <p class="no-task-placeholder">No tasks pending!</p>
+    }
+</div>

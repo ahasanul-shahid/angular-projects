@@ -1,0 +1,49 @@
+:host{
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.todo-container{
+    max-width: 400px;
+    width: max-content;
+    margin: auto;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: lemonchiffon;
+}
+.form-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.form-container input[type='text']{
+    padding: 5px;
+    border-radius: 5px;
+}
+.title, .no-task-placeholder{
+    text-align: center;
+}
+button{
+    padding: 5px;
+    background-color: cornsilk;
+    border-radius: 3px;
+}
+.task-container{
+    margin: 15px 75px;
+    display: flex;
+    justify-content: space-between;
+}
+.task-container span{
+    display: flex;
+    align-items: center;
+    word-wrap: break-word;      
+    overflow-wrap: break-word;  
+    word-break: break-word;     
+    max-width: 75%;
+}
+.task-container button{
+    background-color: orangered;
+    height: 32px;
+}
