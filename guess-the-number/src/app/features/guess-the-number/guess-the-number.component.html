@@ -1,1 +1,35 @@
-<p>guess-the-number works!</p>
+<div class="guess-number-container">
+  <!-- title -->
+  <h1 class="title">Guess the Number Game</h1>
+  <hr />
+  @if (!gameOver){
+  <!-- game instruction -->
+  <p class="secondery">Guess the number between 1 and 100!</p>
+
+  <!-- user guess -->
+  <form [formGroup]="guessForm" (ngSubmit)="onNewGuess()">
+    <div class="form-container">
+      <input
+        type="number"
+        name="guess"
+        id="guess"
+        formControlName="guess"
+        placeholder="make a guess..."
+      />
+      <button type="submit">Check</button>
+      @if (invalidInput) {
+      <p class="small red">number invalid/not in range</p>
+      }
+    </div>
+  </form>
+
+  <!-- game score -->
+  <p class="secondery">Guess remaining: {{ attemptsRemaining }}</p>
+  }
+  <!-- feedback/win/lose -->
+  <p class="secondery">{{ guessFeedback }}</p>
+  <!-- play again -->
+  @if(gameOver){
+  <button class="new-game-btn" (click)="onNewGame()">Play Again</button>
+  }
+</div>

@@ -1,0 +1,53 @@
+:host {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.guess-number-container {
+  max-width: 500px;
+  width: max-content;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: lemonchiffon;
+}
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.form-container input[type="number"] {
+  padding: 5px;
+  border-radius: 2px;
+}
+.title,
+.secondery {
+  text-align: center;
+}
+.small.red {
+  flex-basis: 100%;
+  color: red;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: -5px;
+}
+.vertically-center {
+  display: flex;
+  align-items: center;
+}
+button {
+  padding: 5px;
+  background-color: cornsilk;
+  border-radius: 3px;
+}
+button.new-game-btn {
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
