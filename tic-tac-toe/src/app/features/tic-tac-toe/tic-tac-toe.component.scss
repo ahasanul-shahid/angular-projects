@@ -1,0 +1,56 @@
+:host {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.tic-tac-toe-container {
+  max-width: 325px;
+  width: max-content;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: lemonchiffon;
+}
+
+.title,
+.center-text {
+  text-align: center;
+}
+.board-container {
+  margin: 25px auto;
+  width: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+}
+.cell:hover {
+  background-color: honeydew;
+}
+button {
+  padding: 5px;
+  background-color: cornsilk;
+  border-radius: 3px;
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.red {
+  color: red;
+}
+.yellow {
+  color: rgb(255, 102, 0);
+}
+.green {
+  color: green;
+}

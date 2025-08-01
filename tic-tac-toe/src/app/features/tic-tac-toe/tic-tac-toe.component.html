@@ -1,0 +1,26 @@
+<div class="tic-tac-toe-container">
+  <!-- title -->
+  <h1 class="title">Tic Tac Toe</h1>
+  <hr />
+  <!-- board -->
+  <div class="board-container">
+    @for(cell of board; track index; let index = $index){
+    <div class="cell" (click)="makeMove(index)">{{ cell }}</div>
+    } @empty {
+    <p class="center-text red">Unable to load the game board!</p>
+    }
+  </div>
+  <!-- game result -->
+  @if (gameOver) {
+  <p
+    class="center-text"
+    [class.yellow]="gameOutcome === 'DRAW'"
+    [class.red]="gameOutcome === 'O'"
+    [class.green]="gameOutcome === 'X'"
+  >
+    {{ gameResultMsg }}
+  </p>
+  }
+  <!-- new game -->
+  <button (click)="onNewGame()">Play Again</button>
+</div>
