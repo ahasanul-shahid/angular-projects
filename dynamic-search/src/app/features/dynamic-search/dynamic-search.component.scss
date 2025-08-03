@@ -1,0 +1,33 @@
+:host {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.dynamic-search-container {
+  max-width: 500px;
+  width: max-content;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: lemonchiffon;
+}
+input[type="text"] {
+  width: 97.25%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border-radius: 2px;
+}
+.title {
+  text-align: center;
+}
+.list-container {
+  background-color: aliceblue;
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 15px;
+  border: 1px solid black;
+}

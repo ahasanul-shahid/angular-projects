@@ -1,0 +1,24 @@
+<div class="dynamic-search-container">
+  <!-- title -->
+  <h1 class="title">Dynamic Search Application</h1>
+  <hr />
+  <!-- search -->
+  <form>
+    <input
+      type="text"
+      name="searchText"
+      id="searchText"
+      [formControl]="searchText"
+      autocomplete="off"
+      placeholder="enter search term"
+    />
+  </form>
+  <!-- list/filtered list -->
+  <ul class="list-container">
+    @for(item of filteredSearchItems; track item){
+    <li>{{ item }}</li>
+    }@empty {
+    <li>No items to show!</li>
+    }
+  </ul>
+</div>
