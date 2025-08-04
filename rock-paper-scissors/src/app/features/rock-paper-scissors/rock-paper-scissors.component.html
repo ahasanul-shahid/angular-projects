@@ -1,1 +1,60 @@
-<p>rock-paper-scissors works!</p>
+<div class="rock-paper-scissors-container">
+  <!-- title -->
+  <h1 class="title">Rock, Paper, Scissors Game</h1>
+  <hr />
+  <!-- user choices -->
+  <p class="text-center">User Choice:</p>
+  <div class="choices-container">
+    <div
+      class="choice"
+      [class.selected]="userChoice === 'rock'"
+      (click)="onUserChoice('rock')"
+      [style.cursor]="loading ? 'not-allowed' : 'pointer'"
+    >
+      <img src="/icons/rock.png" alt="rock icon" title="rock" />
+    </div>
+    <div
+      class="choice"
+      [class.selected]="userChoice === 'paper'"
+      (click)="onUserChoice('paper')"
+      [style.cursor]="loading ? 'not-allowed' : 'pointer'"
+    >
+      <img src="/icons/paper.png" alt="paper icon" title="paper" />
+    </div>
+    <div
+      class="choice"
+      [class.selected]="userChoice === 'scissors'"
+      (click)="onUserChoice('scissors')"
+      [style.cursor]="loading ? 'not-allowed' : 'pointer'"
+    >
+      <img src="/icons/scissors.png" alt="scissors icon" title="scissors" />
+    </div>
+  </div>
+  @if(userChoice){
+  <!-- computer choice -->
+  <p class="text-center">Computer choice:</p>
+  <div class="choice computer-choice">
+    @if (loading) {
+    <img
+      src="/gifs/loading.gif"
+      alt="loading gif"
+      title="loading"
+      height="50"
+      width="50"
+    />
+    } @if (!loading && computerChoice) {
+    <img
+      src="/icons/{{ computerChoice }}.png"
+      alt="{{ computerChoice }} icon"
+      [title]="computerChoice"
+    />
+    }
+  </div>
+  <!-- result -->
+  <div class="result">
+    <p class="text-center">{{ gameOutcomeText }}</p>
+  </div>
+  <p class="text-center small">(make choice to play again)</p>
+
+  }
+</div>
