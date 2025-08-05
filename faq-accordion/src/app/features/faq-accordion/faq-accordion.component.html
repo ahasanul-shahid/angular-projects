@@ -1,1 +1,23 @@
-<p>faq-accordion works!</p>
+<div class="application-container">
+  <!-- title-->
+  <h1 class="title">FAQ Accordion Application</h1>
+  <hr />
+  <!-- questions -->
+  <div class="faqs-container">
+    @for(faq of faqList; track index; let index = $index){
+    <div class="faq">
+      <div class="question" (click)="onSelect(index)">
+        <p>{{ faq.question }}</p>
+        <img
+          [src]="
+            index === selectedQuestionIndex ? 'up-arrow.png' : 'down-arrow.png'
+          "
+        />
+      </div>
+      <p class="answer" [hidden]="index !== selectedQuestionIndex">
+        {{ faq.answer }}
+      </p>
+    </div>
+    }
+  </div>
+</div>

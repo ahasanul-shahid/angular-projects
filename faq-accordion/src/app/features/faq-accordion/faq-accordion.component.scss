@@ -1,0 +1,43 @@
+:host {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.application-container {
+  width: 500px;
+  margin: auto;
+  padding: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: lemonchiffon;
+}
+.title {
+  text-align: center;
+}
+.faqs-container {
+  padding: 0;
+}
+.faq {
+  padding: 0 5px;
+  background-color: aliceblue;
+  border: 1px solid black;
+  margin: 10px;
+  cursor: pointer;
+}
+.question img {
+  height: 16px;
+  width: 16px;
+}
+.question {
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+}
+.answer {
+  font-size: 0.85rem;
+  width: 95%;
+  padding: 0 10px;
+}
