@@ -8,11 +8,11 @@ type gameChoices = 'rock' | 'paper' | 'scissors';
   styleUrl: './rock-paper-scissors.component.scss',
 })
 export class RockPaperScissorsComponent {
-  computerChoice: gameChoices | undefined;
-  userChoice: gameChoices | undefined;
+  computerChoice: gameChoices | null = null;
+  userChoice: gameChoices | null = null;
   gameOutcomeText = '';
   loading = false;
-  private readonly _gameChoices: string[] = ['rock', 'paper', 'scissors'];
+  readonly gameChoices: gameChoices[] = ['rock', 'paper', 'scissors'];
 
   onUserChoice(userChoice: gameChoices): void {
     this.resetGame();
@@ -25,16 +25,18 @@ export class RockPaperScissorsComponent {
       } else {
         this._checkResult(userChoice);
       }
-    }, 2000);
+    }, 500);
     this.loading = true;
   }
   resetGame() {
-    this.userChoice = undefined;
-    this.computerChoice = undefined;
+    this.userChoice = null;
+    this.computerChoice = null;
     this.gameOutcomeText = '';
   }
   private _makeComputerChoice(): gameChoices {
-    return this._gameChoices[Math.floor(Math.random() * 3)] as gameChoices;
+    return this.gameChoices[
+      Math.floor(Math.random() * this.gameChoices.length)
+    ] as gameChoices;
   }
   private _checkResult(userChoice: gameChoices) {
     switch (userChoice) {
