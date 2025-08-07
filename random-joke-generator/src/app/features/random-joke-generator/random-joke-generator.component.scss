@@ -1,0 +1,50 @@
+:host {
+  width: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.application-container {
+  width: 500px;
+  margin: auto;
+  padding: 1.25rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lemonchiffon;
+}
+.title {
+  text-align: center;
+  font-size: 1.75rem;
+}
+button {
+  display: block;
+  padding: 10px;
+  margin: 25px auto;
+  border-radius: 5px;
+  background-color: rgb(232, 240, 243);
+  //   background-color: white;
+}
+
+.loading,
+.loading-error {
+  text-align: center;
+  font-size: 0.75rem;
+}
+.loading-error {
+  color: tomato;
+}
+
+.joke-container {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 2px black;
+}
+.setup,
+.punchline {
+  color: tomato;
+  font-weight: bold;
+}

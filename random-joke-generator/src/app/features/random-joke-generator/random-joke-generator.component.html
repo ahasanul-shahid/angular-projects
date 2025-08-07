@@ -1,1 +1,26 @@
-<p>random-joke-generator works!</p>
+<div class="application-container">
+  <!-- title -->
+  <h1 class="title">Random Joke Generator Application</h1>
+  <hr />
+  <!-- new joke button -->
+  <button (click)="onNewJokeRequest()">Generate Joke</button>
+  <!-- loading -->
+  @if(loading){
+  <p class="loading">Loading...</p>
+  }
+  <!-- error -->
+  @if(!loading && loadingError){
+  <p class="loading-error">Error during fetching a joke!</p>
+  }
+  <!-- joke -->
+  @if(!loadingError && ($randomJoke | async); as randomJoke){
+  <div class="joke-container">
+    <p class="joke-setup">
+      <span class="setup">Setup: </span>{{ randomJoke.setup }}
+    </p>
+    <p class="joke-punchline">
+      <span class="punchline">Puncline: </span>{{ randomJoke.punchline }}
+    </p>
+  </div>
+  }
+</div>
